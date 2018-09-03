@@ -1,7 +1,10 @@
 const express = require('express');
 const data = require('./data/data.json');
+const cors = require('cors')
 
 const app = express();
+
+app.use(cors())
 
 app.use(function(req, res, next) {
 	console.log(`${req.method} request for ${req.url}`);
